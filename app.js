@@ -25,11 +25,3 @@ app.get("/register", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/register.html"));
 })
 
-//app.get("/login.html", (req, res) => {
-//    res.sendFile(path.resolve(__dirname, "./views/login.html"));
-//})
-
-app.post("/resultadoRegister", (req, res) => {
-    console.log(req.body);
-    res.redirect("/")
-})

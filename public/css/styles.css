@@ -56,6 +56,49 @@ body {
     font-size: .7rem;
     font-weight: lighter;
     text-align: center;
+    margin-top: 20px;
+}
+
+.rememberUser  {
+    color: #FFC849;
+    margin: 0px;
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 20px;
+    cursor:pointer; cursor: hand
+}
+
+.checkboxWrap {
+    text-align: right;
+}
+
+[type="checkbox"] {
+   display: none;
+}
+
+label {
+   position: relative;
+   padding-left: 24px;
+}
+
+label:before {
+    content: " ";
+    border: solid 1px #FFC849;
+    border-radius: 3px;
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    left: 0px;
+    transition: all 0.2s;
+    transform: rotate(0deg)
+}
+
+[type="checkbox"]:checked + label:before {
+    border: solid 1px #8DC04E;
+    content: "✓";
+    transform: rotate(360deg)
 }
 
 
@@ -149,7 +192,7 @@ form {
     background-color: rgba(0, 0, 0, 0.466);
     display: flex;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -204,6 +247,8 @@ form {
     width: 90%;
     margin: auto;
     margin-top: 20px;
+    padding-bottom: 80px;
+    max-width: 1200px;
 }
 
 
@@ -213,19 +258,42 @@ form {
 
 .lastMovementsTitle {
     background-color:#FFC849;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px;
     height: 35px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     z-index: 1;
+    cursor:pointer; cursor: hand;
+    transition: all 1000ms;
+}
+
+.lastMovementsTitle i {
+    color: black;
+}
+
+.lastMovementsTitle:hover {
+    background-color:#f8b822;
+}
+
+.prueba {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.lastMovementsDown {
+    transform: rotate(0deg);
+    transition: all 1000ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
 
 .lastMovementsInfo {
     background-color: #ebebeb;
     margin: auto;
     border-radius: 0px 0px 15px 15px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -239,6 +307,11 @@ form {
     margin-bottom: 12px;
     margin-top: 12px;
 }
+
+.mostrar {
+    display: flex
+}
+
 
 h4 {
     font-size: .7rem;
@@ -268,6 +341,14 @@ hr {
     margin-bottom: 25px;
 }
 
+.productsForPoints {
+    margin: auto;
+    border: 1.2px solid #f5b215;
+    margin-top: 5px;
+    width: 95%;
+    margin-bottom: 25px;
+}
+
 .productNameWrap {
     background-color: rgba(255, 255, 255, 0.9);
     height: 50px;
@@ -279,28 +360,37 @@ hr {
 
 .productName {
     color: #62B01E;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
-.productShadowWrap {
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.685);
-    width: 90%;
+.productsWrap {
     margin: auto;
     transition: all 1000ms;
+    cursor:pointer; cursor: hand;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.productShadowWrap:hover {
-    width: 91%;
+.productWrap {
+    width: 48%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.685);   
+    transition: all 800ms;
+    margin-bottom: 20px; 
+}
+
+.productWrap:hover {
+    width: 48.2%;
     box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.192);
     cursor:pointer; cursor: hand
 }
 
-.productShadowWrap img {
+.productWrap img {
     width: 100%;
     margin-bottom: -4px;
 }
 
-.productShadowWrap:hover img {
+.productWrap:hover img {
     color: green;
 }
 
@@ -317,25 +407,24 @@ hr {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-bottom: 12px;
-    margin-top: 12px;
-    padding-right: 10px;
+    padding: 12px;
+    padding: -20px;
 }
 
 .category h4 {
-    color: green
+    color: green;
+    font-size: 0.5rem;
 }
 
 .pointsProductWrap {
     background-color: #B6C900;
     margin: auto;
     display: flex;
-    height: 50px;
+    height: 35px;
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
     padding-right: 10px;
-    border-radius: 0px 0px 0px 10px;
 }
 
 .pointProduct {
@@ -349,298 +438,48 @@ hr {
     font-size: 1.4rem;
 }
 
-
-
-
-
-
-
-
-
-.boton-formulario {
-    background-color: #03264C;
-    width: 100px;
-    height: 25px;
-    color: white;
-    border: none;
-    font-size: 12px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    transition: all 400ms;
-    
-}
-
-.boton-formulario:hover {
-    background-color: #0022AA;
-}
-
-
-.formulario-registracion {
-    max-width: 350px;
-    margin-top: 3rem;
-}
-
-.logo {
-    width: 45%;
-    max-width: 200px;
-    transition: all 500ms;
-    
-}
-
-.logo:hover {
-    transform: scale(102%);
-}
-
-.barrabusqueda {
-    font-size: 12px;
-    width: 45%;
-    max-width: 200px;
-    height: 20px;
-    display: flex;
-    }
-
-.cuotas {
-    color: #03264C;
-    text-align: center;
-    font-size: 15px;
-    padding-top: 20px;
-    
-  }
-
-
-.main-header-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;  
-    align-items: center;
-    width: 100%;
-    padding-bottom: 20px;
-    max-width: 1200px;
-    margin: auto;
-    }
-
-.burger-menu {
-        background-color: #03264C;
-        color: white;
-        display: block;
-        max-width: 50px;
-        padding: 15px 0px;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 18px;
-        margin: auto;
-       }
-
-.main-header-bottom {  
-        display: none;
-        max-width: 1200px;
-        margin: auto;
-        }
-
-ul li {
-        list-style:none;
-        }
-
-.iconos {
-        color: #03264C;
-      }
-
-a {
-    color: #03264C;
-}
-
-.buscar {
-    padding: 5px;
-    width: 50%;
-    max-width: 210px;
-    position: relative;
-    }
-
-.buscar input {
-    width: 100%;
-    height: 30px;
-    padding: 0px 20px;
-    color: black;
-    outline: none;
-    border: 1px solid black;
- 
-   
-}
-
-.btn {
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    position: absolute;
-}
-
-.buscar i {
-    right: 13px;
-    position: absolute;
-    top: 14px;
-}
-
-/****main*****/
-
-main section article i:hover {
-    transform: rotate(-90deg);
-}
-
-main section article i {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-    color: #39b54a;
-    transform: rotateZ(
-        0deg);
-   transition: all 500ms;
-}
-
-.cajaproducto {
-    border-top: 1px solid #ebebeb;
-    padding: 10px;
-    position: relative;
-    }
-
-section article {
-    background-color: white;
-    width: 90%;
-    margin: auto;
-    padding: 15px;
-    margin-bottom: 10px;
-}
-
-
-.producto {
-    display: none;
-}
-
-
-
-section article p {
-    margin: 0px;
-}
-
-
-main section article {  
-    box-shadow: none;
-    transition: all 400ms;
-}
-
-
-main section article:hover {  
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-
-main section article img {
-    max-width: 250px;
-    width: 100%;
-    margin: auto;
-    display: flex;
-}
-
 footer {
+    height: 46px;
+    background-color: #FFC849;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    text-align: center;
-    margin-top: 40px;
-    color:#666;
-    padding: 20px;
-    width: 90%;
-    max-width: 1000px;
-    margin-inline: auto;
-    }
+    position: fixed;
+    bottom: 0px;
+}
 
 footer i {
-    color: #03264C;
-    line-height: 10px;
-    font-size: 2em;
-    transition: all 400ms;
-  }
+    color: rgba(0, 0, 0, 0.301);
+    font-size: 1.8rem;
+    cursor:pointer; cursor: hand;
+    transition: all 2000ms ease;
+}
 
 footer i:hover {
-    color: blue;
-    }
-
-footer p {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 14px;
+    color: rgba(0, 0, 0, 0.884);
 }
 
-.condiciones {
-    margin-bottom: 40px;
-}
-.copyright {
-    text-align: left;
-}
-
-
-
-h2 {
-    font-size: 20px;
-    line-height: 22px;
-}
-
-.precio {
-  font-size: 18px;
-  flex-grow: 3;
-}
-
-.des {
-    font-size: 16px;
-    color: #39b54a;
-    flex-grow: 7;
-  }
-.producto {
-    color:#666;
-    font-weight: normal;
-    margin-top: 20px;   
-}
-
-.producto1{
-    flex-grow: 1;
-    margin: 5px;
-    max-width: 290px;
-}
-
-.sevende {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: auto;
-    justify-content: space-evenly;
+footer img {
+    position: relative;
+    width: 47px;
+    right: 3px;
+    top: -3px;
+    border-radius: 50px;
+    background-color: #FFC849;
+    padding: 5px;
+    box-sizing: content-box;
 }
 
 
-.precio-descuento {
-    display: flex;
-    justify-content: space-around;
-   }
 
-.radio {
-    display: flex;
-    font-weight: normal;
-    margin: 1rem 0rem;
-    justify-content: space-around;
-    width: 60%;
-}
 
-.control-intereses {
-    margin: 1rem 0rem;
-    font-weight: normal;
-    display: flex;
-    flex-direction: column
-}
+
+
+
+
+
 
 
 /***************TABLET****************/
@@ -659,86 +498,34 @@ h2 {
     background-size: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***** mercadoliebre *****/    
-.burger-menu {
-    display: none;
-}
-
-.main-header-top { 
-justify-content: space-between;
-}
-
-.main-header-bottom {  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.cuotas {
-     padding-top: 0px;
-    
-  }
-
-.main-header-bottom ul {  
-    display: flex;
-}
-
-.main-header-bottom li {  
-    margin: 0px 15px;
 }
 
 
 
-.producto {
-    display: flex;
-    opacity: 0%;
-    transition: all 1s;
-}
-    
-.producto1:hover .producto{
-        display: flex;
-        opacity: 100%;
-     }
-    
-   
-.sevende {
-    justify-content: center;
-}   
 
-.abajodetodo {
-    display: flex;
-    flex-direction: row;
-}
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 /*************PC**************************/
@@ -765,50 +552,13 @@ justify-content: space-between;
     padding-top: 200px;
 }
 
-
-
-
-
-
-
-
-
-    .main-header-top {
-        display: flex; 
-        justify-content: space-between;
-    }
-    
-.main-header-bottom{
-    display: flex; 
+.productWrap {
+    width: 24%;
+    transition: all 800ms;
 }
 
-    .logo {
-        width: 25%;
-    }
-
-   .cuotas {
-       max-width: 200px;
-       text-align: right;
-   }
-
-   .producto1 {
-    width: 360px;
- }
-
-    .burger-menu{
-        display: none;
-   }
-
-  .main-header-bottom {  
-    display: flex; 
-    justify-content: space-between;
-
+.productWrap:hover {
+    width: 24.2%;
 }
-.main-header-bottom ul {
-    display: flex; 
-}
-  
-.main-header-bottom li {
-    margin: 5px; 
-}
+
 }
