@@ -29,3 +29,7 @@ app.get("/detail", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/detail.html"));
 })
 
+app.get("/profile", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/profile.html"));
+})
+

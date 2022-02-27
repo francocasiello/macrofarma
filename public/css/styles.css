@@ -277,7 +277,7 @@ form {
     background-color: #f5b215;
     border-radius: 10px;
     height: 80px;
-    width: 150px;
+    width: 180px;
     align-items: center;
     display: flex;
     justify-content: space-around;
@@ -286,6 +286,7 @@ form {
     transition: all 1000ms;
     margin-right: 15px;
     padding: 29px;
+    padding-left: 40px;
 }
 
 .user-wrap i {
@@ -495,7 +496,7 @@ hr {
     transition: all 1000ms;
     cursor:pointer; cursor: hand;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -504,6 +505,7 @@ hr {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.685);   
     transition: all 800ms;
     margin-bottom: 20px; 
+    margin-right: 5px;
 }
 
 .product-wrap:hover {
@@ -566,12 +568,10 @@ hr {
 }
 
 footer {
-    height: 46px;
     z-index: 10;
     background-color: #f5b215;
     width: 100%;
     margin-top: 20px;
-    position: fixed;
 }
 
 footer i {
@@ -612,6 +612,22 @@ footer img {
     display: none
 }
 
+.footerIcon {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+}
+
+.footer-img{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-img-wrap {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+}
 
 
 
@@ -978,7 +994,7 @@ footer img {
 .head-img-user {
     position: absolute;
     width: 40px;
-    right: 115px;
+    right: 144px;
     top: 47px;
     transform: rotateY();
     border-radius: 50px;
@@ -994,7 +1010,7 @@ footer img {
 .head-img-user-scroll {
     position: absolute;
     width: 40px;
-    right: 115px;
+    right: 110px;
     top: -5px;
     transform: rotateY();
     border-radius: 50px;
@@ -1219,6 +1235,8 @@ footer {
     position: relative;
     margin-right: 20px;
     transition: all 1000ms;
+    padding-left: 20px;
+
 }
 
 .user-wrap-scroll i {
@@ -1245,10 +1263,16 @@ footer {
 }
 
 .footer-pc {
-      height: 46px;
+    height: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+
+.footer-profile {
+    position:fixed;
+    bottom: 0px;
 }
 
 }

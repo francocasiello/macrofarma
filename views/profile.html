@@ -59,7 +59,7 @@ rel="stylesheet" />
 
 </header>
 
- <!-- BODY -->
+
 <body class = "bodyProducts">
 
 <main class = "mainProducts">
@@ -119,136 +119,39 @@ rel="stylesheet" />
 
     <section>
         <div class = "products-titles">
-        <p>Nuestros Productos</p>
-        <i class="fa-solid fa-box"></i>
+        <p>Editar datos de usuario</p>
+        <i class="fa-solid fa-user-pen"></i>
         </div>
         <hr>
     </section>
 
-    <section class = "products-wrap">
-        <!-- PRODUCTO 1 -->
-        <div class = "product-wrap">
-            <div class = "product-name-wrap">
-                <h3 class = "product-name">NOMBRE PRODUCTO</h3>
-             </div>
-            <img src = "./images/product1.jpg" alt = "product-name">
-            <div class = "categoryWrap">
-                <div class = "category">
-                   <h4>CATEGORIA DEL PRODUCTO</h4>
-                </div> 
+    <section class = "products-wrap-d">
+        <form action="/" method="GET" class="formulario-login">
+       
+            <h3 class="loginText">NOMBRE</h3>
+            <div class = "control-formulario">
+                <input type="text" name="name" class="control" minlength="2" required>
             </div>
-            <div class = "pointsproduct-wrap">
-                <div class = "pointProduct">
-                    <h4>150p</h4>
-                </div> 
-             </div>
-        </div>
-        <!-- PRODUCTO 2 -->
-        <div class = "product-wrap">
-            <div class = "product-name-wrap">
-                <h3 class = "product-name">NOMBRE PRODUCTO</h3>
-             </div>
-            <img src = "./images/product1.jpg" alt = "product-name">
-            <div class = "categoryWrap">
-                <div class = "category">
-                   <h4>CATEGORIA DEL PRODUCTO</h4>
-                </div> 
+            <h3 class="loginText">APELLIDO</h3>
+            <div class = "control-formulario">
+                <input type="text" name ="lastname"  class ="control" required>
             </div>
-            <div class = "pointsproduct-wrap">
-                <div class = "pointProduct">
-                    <h4>150p</h4>
-                </div> 
-             </div>
-        </div>
-        <!-- PRODUCTO 3 -->
-        <div class = "product-wrap">
-            <div class = "product-name-wrap">
-                <h3 class = "product-name">NOMBRE PRODUCTO</h3>
-             </div>
-            <img src = "./images/product1.jpg" alt = "product-name">
-            <div class = "categoryWrap">
-                <div class = "category">
-                   <h4>CATEGORIA DEL PRODUCTO</h4>
-                </div> 
+            <h3 class="loginText">FECHA DE NACIMIENTO</h3>
+            <div class = "control-formulario">
+                <input type="date" name ="date"  class ="control" required>
             </div>
-            <div class = "pointsproduct-wrap">
-                <div class = "pointProduct">
-                    <h4>150p</h4>
-                </div> 
-             </div>
-        </div>
-        <!-- PRODUCTO 4 -->
-        <div class = "product-wrap">
-            <div class = "product-name-wrap">
-                <h3 class = "product-name">NOMBRE PRODUCTO</h3>
-             </div>
-            <img src = "./images/product1.jpg" alt = "product-name">
-            <div class = "categoryWrap">
-                <div class = "category">
-                   <h4>CATEGORIA DEL PRODUCTO</h4>
-                </div> 
+            <h3 class="loginText">EMAIL</h3>
+            <div class = "control-formulario">
+                <input type="mail" name ="mail"  class ="control" required>
             </div>
-            <div class = "pointsproduct-wrap">
-                <div class = "pointProduct">
-                    <h4>150p</h4>
-                </div> 
-             </div>
-        </div>
-                
+            <button type="submit" class="buttonLogIn">EDITAR</button>
+            </form>
     </section>
-
-    <!-- PRODUCTOS POR PUNTOS -->
-
-    <section>
-        <div class = "products-titles">
-        <p>Productos por tus puntos</p>
-        <i class="fa-solid fa-dolly"></i>
-        </div>
-        <hr class = "products-for-points">
-    </section>
-    
-    <section class = "products-wrap-p">
-        <!-- PRODUCTO X POINTS 1 -->
-        <div class = "product-wrap-p">
-            <div class = "image-p" style = "background-image: url('../images/product1.jpg')"></div>
-            <div class = "product-description-wrap-p">
-               <div class = "product-description-wrap2-p">
-                <div class = "category-p">
-                    <h4>CATEGORIA DEL PRODUCTO</h4> 
-                 </div>
-               <div class = "product-name-p">
-                  <h3>NOMBRE DEL PRODUCTO</h3> 
-               </div>
-               <div class = "product-price-p">
-                    <h3>150p</h3> 
-               </div>
-               </div>     
-            </div>
-        </div>
-
-        <div class = "product-wrap-p">
-            <div class = "image-p" style = "background-image: url('../images/product1.jpg')"></div>
-            <div class = "product-description-wrap-p">
-               <div class = "product-description-wrap2-p">
-                <div class = "category-p">
-                    <h4>CATEGORIA DEL PRODUCTO</h4> 
-                 </div>
-               <div class = "product-name-p">
-                  <h3>NOMBRE DEL PRODUCTO</h3> 
-               </div>
-               <div class = "product-price-p">
-                    <h3>150p</h3> 
-               </div>
-               </div>     
-            </div>
-        </div>
-        
-    </section>
+            
 </main>
 
-
- <!-- FOOTER -->
- <footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer-profile">
     
     <!-- FOOTER MOBILE-->
     <div class = "footer-mobile">
@@ -270,4 +173,3 @@ rel="stylesheet" />
 <script src="/js/Product.js"></script>    
 </body>
 </html>
-
