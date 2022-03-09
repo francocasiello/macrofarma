@@ -1,3 +1,9 @@
+:root {
+    --p-color: #436b39;
+    --s-color: #ffffff;
+    --t-color: #7fc22d;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -12,59 +18,56 @@ body {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    background-color: #ebebeb; 
+    background-color: var(--s-color); 
     height: 100vh;
    }
 
+p {
+    color: var(--p-color);
+    font-weight: bold;
+}
 
 .logoLogin {
     display: flex;
     align-items: center;
     margin: auto;
-    width: 100px;
-    margin-bottom: 90px;
+    width: 187px;
+    margin-bottom: 20px;
 }
 
 .loginBg {
-    background-color: #8DC04E;
+    background-color: #ffffff;
 }
 
 .loginMain {
-    margin-top: 78px;
-    padding-top: 120px;
-    border-radius: 25px 25px 0px 0px;
-    box-shadow: 0px -6px 13px rgb(0 0 0 / 50%);
-    background-image: url("../images/bkg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    padding-top: 260px;
     height: 100vh;
 }
 
 .loginText  {
-    color: white;
+    color: var(--p-color);
     margin: 0px;
     margin-bottom: 12px;
-    font-size: .7rem;
-    font-weight: lighter;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 
 .forgotPass  {
-    color: #f5b215;
+    color: var(--p-color);
     margin: 0px;
     margin-bottom: 12px;
-    font-size: .7rem;
-    font-weight: lighter;
+    font-size: 1rem;
+    font-weight: bolder;
     text-align: center;
     margin-top: 20px;
 }
 
 .rememberUser  {
-    color: #f5b215;
+    color: var(--p-color);
     margin: 0px;
     margin-bottom: 12px;
-    font-size: 0.8rem;
-    font-weight: lighter;
+    font-size: 1rem;
+    font-weight: bolder;
     text-align: center;
     margin-top: 20px;
     cursor:pointer; cursor: hand
@@ -85,7 +88,7 @@ label {
 
 label:before {
     content: " ";
-    border: solid 1px #f5b215;
+    border: solid 1px var(--p-color);
     border-radius: 3px;
     width: 1.2rem;
     height: 1.2rem;
@@ -131,7 +134,7 @@ form {
 .control:focus {
     width: 100%;
     padding: 8px;
-    box-shadow: 0px 0px 8px rgba(243, 247, 15, 0.993);
+    box-shadow: 0px 0px 8px var(--t-color);
     border: none;
     border-radius: 10px;
     height: 45px;
@@ -152,8 +155,8 @@ form {
     line-height: 28px;
     width: 80%;
     height: 72px;
-    background: #f5b215;
-    color: #484A46;
+    background: var(--p-color);
+    color: var(--s-color);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border-radius: 9px;
     align-items: center;
@@ -162,7 +165,7 @@ form {
 }
 
 .buttonLogIn:hover {
-    background-color: #f8b822;
+    background-color: var(--t-color);
     font-size: 26px;
     cursor:pointer; cursor: hand
 }
@@ -182,10 +185,7 @@ form {
 }
 
 .bodyProducts {
-    background-image: url("../images/bkg.jpg");
-    background-repeat: repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: var(--s-color);
 }
 
 .header-pu {
@@ -193,7 +193,7 @@ form {
 }
 
 .header-bg {
-    background-color: rgba(0, 0, 0, 0.466);
+    background-color: var(--p-color);
     display: flex;
     padding-top: 40px;
     padding-bottom: 30px;
@@ -202,7 +202,7 @@ form {
 }
 
 .header-scroll {
-    background-color: rgba(0, 0, 0, 0.466);
+    background-color: var(--p-color);
     display: flex;
     top: -190px; 
     position: fixed;
@@ -213,7 +213,6 @@ form {
     justify-content: space-around;
     align-items: center;
     transition: all 500ms;
-    background-color: #011302eb;
 }
 
 .scroll-show {
@@ -221,7 +220,6 @@ form {
 }
 
 .points-wrap-scroll {
-    background-color: #f5b215;
     border-radius: 10px;
     height: 30px;
     width: 150px;
@@ -229,7 +227,6 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     position: relative;
     margin-right: 20px;
     transition: all 1000ms;
@@ -241,9 +238,9 @@ form {
 
 .point-img-scroll {
     position: absolute;
-    width: 40px;
-    right: 115px;
-    top: -6px;
+    width: 30px;
+    right: 98px;
+    top: 0px;
     transform: rotateY();
     transition: all 1000ms;
 }
@@ -259,22 +256,26 @@ form {
 }
 
 .points-wrap {
-    background-color: #f5b215;
-    border-radius: 10px;
     height: 80px;
     width: 150px;
     align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     position: relative;
     transition: all 1000ms;
     margin-right: 15px;
 }
 
+
+.points-wrap h3{
+    color: white;
+    padding-left: 4px;
+    padding-right: 50px;
+}
+
 .user-wrap {
-    background-color: #f5b215;
+    background-color: rgba(0, 0, 0, 0.185);
     border-radius: 10px;
     height: 80px;
     width: 180px;
@@ -290,29 +291,43 @@ form {
 }
 
 .user-wrap i {
-    color: rgba(0, 0, 0, 0.301);
-    font-size: 1.8rem;
+    color: var(--s-color);
+    font-size: 1.5rem;
     cursor:pointer; cursor: hand;
     transition: all 2000ms ease;
 }
 
 .user-wrap i:hover {
-    color: rgba(0, 0, 0, 0.884);
+    color: var(--t-color)
 }
 
-.points-wrap:hover {
-    box-shadow: 2px 2px 2px 2px rgba(252, 229, 27, 0.233);
-}
 
 .points {
-    color: #57772f;
-    font-size: 1.6rem;
+    color: var(--s-color);
+    font-size: 1rem;
+    font-weight: bold;
     transition: all 1000ms;
 }
 
 .user-wrap {
     display: none;
 }
+
+.coin-point {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+
+.point-img-1 {
+    width: 25px;
+    right: 115px;
+    top: 47px;
+    transform: rotateY();
+    transition: all 1000ms;
+}
+
 
 .point-img {
     position: absolute;
@@ -323,10 +338,26 @@ form {
     transition: all 1000ms;
 }
 
+.point-product {
+    width: 20px !important; 
+    padding-right: 5px;
+    transform: rotateY();
+    background-color: transparent !important;
+    padding-bottom: 4px;
+    transition: all 1000ms;
+}
+
+.point-product:hover {
+    transform: rotateY(360deg);
+}
+
 .point-img:hover {
     transform: rotateY(360deg);
 }
 
+.point-img-1:hover {
+    transform: rotateY(360deg);
+}
 
 
 
@@ -345,7 +376,7 @@ form {
 
 
 .lastMovementsTitle {
-    background-color:#f5b215;
+    background-color: var(--p-color);
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.685);
     border-radius: 15px;
     height: 35px;
@@ -359,12 +390,12 @@ form {
 }
 
 .lastMovementsTitle i {
-    color: black;
+    color: var(--s-color);
     margin: auto;
 }
 
 .lastMovementsTitle:hover {
-    background-color:#f8b822;
+    background-color: var(--p-color)
 }
 
 .prueba {
@@ -398,6 +429,7 @@ form {
 }
 
 .last-down-txt {
+    color: var(--s-color);
     width: 50%;
     text-align: center;
 }
@@ -458,6 +490,7 @@ h4 {
 
 .products-titles i {
     font-size: 1.2rem;
+    color: var(--p-color);
 }
 
 
@@ -471,24 +504,25 @@ hr {
 
 .products-for-points {
     margin: auto;
-    border: 1.2px solid #f5b215;
     margin-top: 5px;
     width: 95%;
     margin-bottom: 25px;
 }
 
 .product-name-wrap {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--p-color);
     height: 50px;
     display: flex;
     align-items: center;
     padding-left: 10px;
-    border-radius: 0px 15px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
+    justify-content: center;
 }
 
 .product-name {
-    color: #62B01E;
-    font-size: 1.2rem;
+    color: var(--s-color);
+    font-size: 1rem;
+    font-weight: lighter;
 }
 
 .products-wrap {
@@ -503,7 +537,6 @@ hr {
 
 .product-wrap {
     width: 48%;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.685);   
     transition: all 800ms;
     margin-bottom: 20px; 
     margin-right: 5px;
@@ -512,7 +545,6 @@ hr {
 
 .product-wrap:hover {
     width: 48.2%;
-    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.192);
     cursor:pointer; cursor: hand
 }
 
@@ -521,7 +553,7 @@ hr {
     height: 200px;
     margin-bottom: -4px;
     object-fit: contain;
-    background-color: white;
+    background-color: #fdf0f0;
     transition: all 1500ms;
 }
 
@@ -544,22 +576,24 @@ hr {
     justify-content: flex-end;
     padding: 12px;
     padding: -20px;
+    background-color: var(--t-color);
 }
 
 .category h4 {
-    color: green;
-    font-size: 0.5rem;
+    color: var(--p-color);
+    font-size: 0.9rem;
+    text-align: end;
 }
 
 .pointsproduct-wrap {
-    background-color: #B6C900;
+    background-color: var(--p-color);
     margin: auto;
     display: flex;
-    height: 35px;
-    align-items: flex-end;
+    height: 40px;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-right: 10px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .pointProduct {
@@ -569,26 +603,26 @@ hr {
 }
 
 .pointProduct h4 {
-    color: black;
-    font-size: 1.4rem;
+    color: var(--s-color);
+    font-size: 0.9rem;
 }
 
 footer {
     z-index: 10;
-    background-color: #f5b215;
+    background-color: var(--p-color);
     width: 100%;
     margin-top: 20px;
 }
 
 footer i {
-    color: rgba(0, 0, 0, 0.301);
+    color:var(--s-color);
     font-size: 1.8rem;
     cursor:pointer; cursor: hand;
     transition: all 2000ms ease;
 }
 
 footer i:hover {
-    color: rgba(0, 0, 0, 0.884);
+    color: var(--t-color)
 }
 
 footer img {
@@ -597,14 +631,14 @@ footer img {
     right: 3px;
     top: -3px;
     border-radius: 50px;
-    background-color: #f5b215;
+    background-color: var(--p-color);
     padding: 5px;
     box-sizing: content-box;
 }
 
 .footer-mobile {
     display: flex;
-    background-color: #f5b215;
+    background-color: var(--p-color);
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
@@ -615,7 +649,8 @@ footer img {
 }
 
 .footer-pc {
-    display: none
+    display: none;
+    color: var(--s-color)
 }
 
 .footerIcon {
@@ -665,8 +700,7 @@ footer img {
 .product-wrap-p {
     width: 95%;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.685); 
+    background-color: #fdf0f0;
     border-radius: 15px;  
     transition: all 800ms;
     height: 150px;
@@ -711,14 +745,13 @@ footer img {
 
 .product-description-wrap-p {
     height: 90%;
-    background-color: #f5b215;
+    background-color: var(--p-color);
     border-radius: 15px;
     position: absolute;
     z-index: 1;
     top: -14px;
     right: 21px;
     width: 50%;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.692);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -751,8 +784,9 @@ footer img {
 }
 
 .product-price-p h3 {
-    font-size: 1.7rem;
+    font-size: 0.8rem;
     text-align: right;
+    color: var(--s-color);
 }
 
 .categoryWrap-p {
@@ -765,11 +799,13 @@ footer img {
 
 .product-name-p h3 {
     text-align: right;
+    color: var(--s-color);
 }
 
 .category-p h4 {
     text-align: right;
     font-size: 0.7rem;
+    color: var(--s-color);
 }
 
 .pointsproduct-wrap-p {
@@ -928,15 +964,10 @@ footer img {
 
 .loginMain {
     width: 80%;
-    margin: 78px auto auto auto;
+    margin: auto;
 }   
 
-.loginBg {
-    background-image: url("../images/bkg-bw.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+
 
 /**** DESCRIPCIÓN PRODUCTO TABLET ****/
 
@@ -999,12 +1030,16 @@ footer img {
     padding-top: 0px;
     border-radius: 0px 0px 0px 0px;
     box-shadow: 0px -6px 13px rgb(0 0 0 / 50%);
-    background-image: url("../images/bkg.jpg");
+    background-color: var(--s-color);
+    height: 100vh;
+    width: 40%;
+}
+
+.loginBg {
+    background-image: url("../images/bkg-bw.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    width: 40%;
 }
 
 .logoLogin {
@@ -1017,18 +1052,18 @@ footer img {
 
 .head-img-user {
     position: absolute;
-    width: 40px;
+    width: 50px;
     right: 144px;
     top: 47px;
     transform: rotateY();
     border-radius: 50px;
-    background-color: #f5b215;
+    background-color: rgba(0, 0, 0, 0.185);
     padding: 1px;
     transition: all 1000ms;
 }
 
 .head-img-user:hover {
-    width: 43px;
+    width: 53px;
 }
 
 .head-img-user-scroll {
@@ -1038,7 +1073,7 @@ footer img {
     top: -5px;
     transform: rotateY();
     border-radius: 50px;
-    background-color: #f5b215;
+    background-color: rgba(0, 0, 0, 0.185);
     padding: 1px;
     transition: all 1000ms;
 }
@@ -1244,7 +1279,7 @@ footer {
 }
 
 .button-exchange-d:hover {
-    background-color: #f8b822;
+    background-color: rgba(0, 0, 0, 0.185);
     font-size: 26px;
     cursor:pointer; cursor: hand
 }
@@ -1259,7 +1294,7 @@ footer {
 }
 
 .user-wrap-scroll {
-    background-color: #f5b215;
+    background-color: rgba(0, 0, 0, 0.185);
     border-radius: 10px;
     height: 30px;
     width: 150px;
@@ -1276,15 +1311,15 @@ footer {
 }
 
 .user-wrap-scroll i {
-    color: rgba(0, 0, 0, 0.301);
-    font-size: 1.4rem;
+    color: var(--s-color);
+    font-size: 1.2rem;
     cursor:pointer; cursor: hand;
     margin-left: 10px;
     transition: all 2000ms ease;
 }
 
 .user-wrap-scroll i:hover {
-    color: rgba(0, 0, 0, 0.884);
+    color: var(--t-color)
 }
 
 .footer-mobile {
